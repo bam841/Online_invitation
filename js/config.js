@@ -13,7 +13,7 @@ const INVITATION_CONFIG = {
   // Wednesday, November 11, 2026 from 12:00 PM to 1:00 PM
   eventDateTime: "2026-11-11T12:00:00",
   dateDisplay: "Wednesday, November 11, 2026",
-  timeDisplay: "12:00 PM – 1:00 PM",
+  timeDisplay: "5:00 PM – 6:00 PM",
   
   // Venue & Google Maps Directions
   venueName: "Lipa Grill - Padre Garcia",

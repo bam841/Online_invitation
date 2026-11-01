@@ -11,9 +11,9 @@
     momName: "Neddie Zapico",
     milestone: "50th Birthday",
     tagline: "A Birthday Celebration",
-    eventDateTime: "2026-11-11T12:00:00",
+    eventDateTime: "2026-11-11T17:00:00",
     dateDisplay: "Wednesday, November 11, 2026",
-    timeDisplay: "12:00 PM – 1:00 PM",
+    timeDisplay: "5:00 PM – 6:00 PM (Dinner)",
     venueName: "Lipa Grill - Padre Garcia",
     venueAddress: "San Felipe, Padre Garcia",
     googleMapsUrl: "https://www.google.com/maps/place/Lipa+Grill+-+Padre+Garcia/@13.890363,121.197294,17z/data=!3m1!4b1!4m6!3m5!1s0x33bd15001cda605d:0xf23dfb83ab8018b2!8m2!3d13.890363!4d121.2021595!16s%2Fg%2F11x8gn_b1b?entry=ttu&g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D",
@@ -102,7 +102,7 @@
 
     // Celebration Details
     const detailCards = document.querySelectorAll('.detail-card');
-    if (detailCards.length >= 3) {
+    if (detailCards.length >= 2) {
       // Date card
       const dateMain = detailCards[0].querySelector('.detail-card-main');
       const dateSub = detailCards[0].querySelector('.detail-card-sub');
@@ -114,7 +114,8 @@
       const venueSub = detailCards[1].querySelector('.detail-card-sub');
       if (venueMain && cfg.venueName) venueMain.textContent = cfg.venueName;
       if (venueSub && cfg.venueAddress) venueSub.textContent = cfg.venueAddress;
-
+    }
+    if (detailCards.length >= 3) {
       // Dress code card
       const dressMain = detailCards[2].querySelector('.detail-card-main');
       const dressSub = detailCards[2].querySelector('.detail-card-sub');
@@ -704,8 +705,8 @@
       `SUMMARY:${cal.title || `${cfg.momName}'s 50th Birthday Celebration`}`,
       `DESCRIPTION:${cal.description || `Celebrate ${cfg.momName}'s 50th Birthday at ${cfg.venueName}!`}`,
       `LOCATION:${cal.location || `${cfg.venueName}, ${cfg.venueAddress}`}`,
-      `DTSTART:${cal.start || '20261111T120000'}`,
-      `DTEND:${cal.end || '20261111T130000'}`,
+      `DTSTART:${cal.start || '20261111T170000'}`,
+      `DTEND:${cal.end || '20261111T180000'}`,
       'STATUS:CONFIRMED',
       'END:VEVENT',
       'END:VCALENDAR'

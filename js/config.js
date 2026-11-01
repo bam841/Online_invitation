@@ -10,10 +10,10 @@ const INVITATION_CONFIG = {
   letterHeader: "You're Invited to Celebrate",
 
   // Target Date & Time for Countdown & Event
-  // Wednesday, November 11, 2026 from 12:00 PM to 1:00 PM
-  eventDateTime: "2026-11-11T12:00:00",
+  // Wednesday, November 11, 2026 from 5:00 PM to 6:00 PM (Dinner)
+  eventDateTime: "2026-11-11T17:00:00",
   dateDisplay: "Wednesday, November 11, 2026",
-  timeDisplay: "5:00 PM – 6:00 PM",
+  timeDisplay: "5:00 PM – 6:00 PM (Dinner)",
   
   // Venue & Google Maps Directions
   venueName: "Lipa Grill - Padre Garcia",
@@ -58,10 +58,10 @@ const INVITATION_CONFIG = {
   // Calendar Event Details
   calendar: {
     title: "Neddie Zapico's 50th Birthday Celebration",
-    description: "Join us in celebrating Neddie Zapico's milestone 50th Birthday at Lipa Grill - Padre Garcia! Dress code: Semi-formal (Rose Gold, Champagne & Cream).",
+    description: "Join us for dinner celebrating Neddie Zapico's milestone 50th Birthday at Lipa Grill - Padre Garcia! Dress code: Semi-formal (Rose Gold, Champagne & Cream).",
     location: "Lipa Grill - Padre Garcia, San Felipe, Padre Garcia",
-    start: "20261111T120000",
-    end: "20261111T130000"
+    start: "20261111T170000",
+    end: "20261111T180000"
   }
 };
 

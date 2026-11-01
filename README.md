@@ -10,12 +10,12 @@ A luxury, interactive, mobile-optimized online birthday invitation web applicati
 - 📱 **Mobile-First & Ultra-Smooth**: Designed specifically for smartphone screens with fluid touch gestures, fast animations, and responsive centering on desktop.
 - 🔄 **Rotating "Happy Birthday to You" Word Carousel**: An infinite celebratory marquee ribbon streaming gold sparkles, warm rose-gold gradients, and continuous birthday greetings.
 - ⬇️ **Automatic Smooth Scroll-Down Tour**: Guides guests smoothly down through the hero, word carousel, memory lane, and celebration details (with instant user-touch cancellation).
-- ⏰ **Live Countdown Timer**: Real-time ticker counting down to Wednesday, November 11, 2026 at 12:00 PM.
+- ⏰ **Live Countdown Timer**: Real-time ticker counting down to Wednesday, November 11, 2026 at 5:00 PM.
 - 📍 **Exact Venue & 1-Tap Directions**: Pre-configured for **Lipa Grill - Padre Garcia** (San Felipe, Padre Garcia) with direct Google Maps navigation.
 - 🖼️ **Portrait & Memory Lane**: Arched portrait frame featuring Neddie Zapico (`asset/mainInvitationPicture.jpeg`), with an auto-scrolling photo carousel and full-screen lightbox zoom.
 - 🎵 **"Happy Birthday" Music Synthesizer**: Built-in music box synthesizer via the Web Audio API (100% offline, zero external audio loading needed) with an animated sound wave toggle button.
 - 📅 **Add to Calendar**:
-  - Generates and downloads a `.ics` calendar event (Apple Calendar, Google Calendar, Outlook) for November 11, 2026 from 12:00 PM to 1:00 PM.
+  - Generates and downloads a `.ics` calendar event (Apple Calendar, Google Calendar, Outlook) for November 11, 2026 from 5:00 PM to 6:00 PM (Dinner).
 - ⚙️ **Centralized Configuration (`js/config.js`)**: All names, dates, venues, maps links, and photos can be edited in one single file.
 
 ---
@@ -36,7 +36,7 @@ python3 -m http.server 8000
 Open [js/config.js](file:///home/bamz/Documents/vs_code/online-invitation/js/config.js) in your text editor and update:
 - `momName`: `"Neddie Zapico"`
 - `milestone`: `"50th Birthday"`
-- `eventDateTime`: `"2026-11-11T12:00:00"`
+- `eventDateTime`: `"2026-11-11T17:00:00"`
 - `venueName`: `"Lipa Grill - Padre Garcia"`
 - `venueAddress`: `"San Felipe, Padre Garcia"`
 - `googleMapsUrl`: Direct link to Google Maps

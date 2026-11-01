@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#FBF4EC">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="description" content="You're Invited to Celebrate Mom's Birthday! An elegant online invitation.">
+
+  <title>Mom's Birthday Celebration | Online Invitation</title>
+
+  <!-- Preconnect to Google Fonts for lightning-fast typography on mobile -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Fullscreen Confetti Canvas -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Ambient Floating Petals / Sparkles Background -->
+  <div class="ambient-particles" id="ambient-particles" aria-hidden="true"></div>
+
+  <!-- Sticky Audio Control Toggle -->
+  <button id="music-toggle-btn" class="music-toggle-btn" aria-label="Play background music" title="Toggle Music">
+    <div class="music-bars" aria-hidden="true">
+      <span class="music-bar"></span>
+      <span class="music-bar"></span>
+      <span class="music-bar"></span>
+    </div>
+  </button>
+
+  <!-- Central Mobile Container -->
+  <div class="app-viewport">
+
+    <!-- ====================================================================
+         SCREEN 1: 3D INTERACTIVE ENVELOPE (Splash)
+         ==================================================================== -->
+    <section id="screen-envelope" class="screen-envelope" aria-label="Invitation Envelope">
+      
+      <div class="envelope-header">
+        <p class="envelope-subtitle">You're Invited to Celebrate</p>
+        <h1 class="envelope-title">Mom</h1>
+      </div>
+
+      <!-- 3D Envelope Stage -->
+      <div class="envelope-stage" id="envelope-stage">
+        <div class="envelope-box" id="envelope-box" role="button" tabindex="0" aria-label="Open Birthday Invitation Envelope">
+          
+          <!-- Back layer -->
+          <div class="envelope-back"></div>
+
+          <!-- The letter sliding upward -->
+          <div class="envelope-letter" id="envelope-letter">
+            <span class="letter-mini-title">A Milestone Celebration</span>
+            <span class="letter-mini-name">Mom's Birthday</span>
+            <span class="letter-mini-date">Tap below to open</span>
+          </div>
+
+          <!-- Front envelope folds -->
+          <div class="envelope-front-pocket" aria-hidden="true">
+            <div class="envelope-pocket-left"></div>
+            <div class="envelope-pocket-right"></div>
+            <div class="envelope-pocket-bottom"></div>
+          </div>
+
+          <!-- Top flap that rotates in 3D -->
+          <div class="envelope-flap" id="envelope-flap" aria-hidden="true"></div>
+
+          <!-- Wax Seal with "M" initial -->
+          <div class="wax-seal" id="wax-seal" aria-hidden="true">M</div>
+
+        </div>
+      </div>
+
+      <!-- Open CTA Button -->
+      <button id="open-invite-btn" class="open-invite-btn">
+        <span>Tap to Open</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M5 12h14"></path>
+          <path d="m12 5 7 7-7 7"></path>
+        </svg>
+      </button>
+
+    </section>
+
+    <!-- ====================================================================
+         SCREEN 2 & 3: MAIN CELEBRATION INVITATION
+         ==================================================================== -->
+    <main id="main-invitation" class="main-invitation">
+
+      <!-- --- HERO SECTION --- -->
+      <header class="hero-section">
+        <p class="hero-tagline">A Birthday Celebration</p>
+        
+        <!-- Arched Photo Frame -->
+        <div class="mom-portrait-wrap">
+          <img src="asset/mader.jpeg" alt="Mom's Portrait" class="mom-portrait-img" loading="eager">
+        </div>
+
+        <h1 class="hero-name">Mom</h1>
+        <p class="hero-milestone">50th Birthday</p>
+
+        <!-- Live Real-Time Countdown -->
+        <div class="countdown-container" aria-label="Countdown to Birthday Celebration">
+          <div class="countdown-box">
+            <div class="countdown-value" id="count-days">00</div>
+            <div class="countdown-label">Days</div>
+          </div>
+          <div class="countdown-box">
+            <div class="countdown-value" id="count-hours">00</div>
+            <div class="countdown-label">Hours</div>
+          </div>
+          <div class="countdown-box">
+            <div class="countdown-value" id="count-mins">00</div>
+            <div class="countdown-label">Mins</div>
+          </div>
+          <div class="countdown-box">
+            <div class="countdown-value" id="count-secs">00</div>
+            <div class="countdown-label">Secs</div>
+          </div>
+        </div>
+      </header>
+
+      <!-- --- MEMORY LANE SECTION --- -->
+      <section class="memory-lane-section" aria-label="Memory Lane Photo Carousel">
+        <h2 class="section-heading">Memory Lane</h2>
+        <p class="section-subheading">Swipe through the years</p>
+
+        <div class="carousel-viewport-wrapper">
+          <button id="carousel-prev" class="carousel-nav-btn carousel-nav-prev" aria-label="Previous Photo">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
+
+          <div class="memory-carousel" id="memory-carousel" tabindex="0">
+            
+            <article class="memory-card">
+              <div class="memory-photo-wrap">
+                <img src="asset/2.jpeg" alt="Memory Photo 1" loading="lazy">
+              </div>
+              <div class="memory-caption-box">
+                <h3 class="memory-caption-title">Forever Radiant</h3>
+                <p class="memory-caption-text">A heart full of love and grace that lights up every room.</p>
+              </div>
+            </article>
+
+            <article class="memory-card">
+              <div class="memory-photo-wrap">
+                <img src="asset/3.jpeg" alt="Memory Photo 2" loading="lazy">
+              </div>
+              <div class="memory-caption-box">
+                <h3 class="memory-caption-title">Golden Moments</h3>
+                <p class="memory-caption-text">Through all the years, your laughter and wisdom guide us.</p>
+              </div>
+            </article>
+
+            <article class="memory-card">
+              <div class="memory-photo-wrap">
+                <img src="asset/4.jpeg" alt="Memory Photo 3" loading="lazy">
+              </div>
+              <div class="memory-caption-box">
+                <h3 class="memory-caption-title">Family First</h3>
+                <p class="memory-caption-text">The pillar of our family, nurturing every dream with devotion.</p>
+              </div>
+            </article>
+
+            <article class="memory-card">
+              <div class="memory-photo-wrap">
+                <img src="asset/5.jpeg" alt="Memory Photo 4" loading="lazy">
+              </div>
+              <div class="memory-caption-box">
+                <h3 class="memory-caption-title">Cherished Memories</h3>
+                <p class="memory-caption-text">Surrounded by loved ones and warm, beautiful smiles.</p>
+              </div>
+            </article>
+
+            <article class="memory-card">
+              <div class="memory-photo-wrap">
+                <img src="asset/cake.jpeg" alt="Memory Photo 5" loading="lazy">
+              </div>
+              <div class="memory-caption-box">
+                <h3 class="memory-caption-title">A Life Well Lived</h3>
+                <p class="memory-caption-text">Celebrating five decades of wonderful memories and sweet blessings.</p>
+              </div>
+            </article>
+
+          </div>
+
+          <button id="carousel-next" class="carousel-nav-btn carousel-nav-next" aria-label="Next Photo">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- --- CELEBRATION DETAILS SECTION --- -->
+      <section class="details-section" aria-label="Event Details">
+        <h2 class="section-heading" style="text-align: center;">The Celebration</h2>
+
+        <div class="details-card-stack">
+          
+          <!-- Date & Time Card -->
+          <div class="detail-card">
+            <p class="detail-card-badge">Date &amp; Time</p>
+            <div class="detail-card-main">Wednesday, November 11, 2026</div>
+            <div class="detail-card-sub">12:00 PM – 1:00 PM</div>
+          </div>
+
+          <!-- Venue Card -->
+          <div class="detail-card">
+            <p class="detail-card-badge">Venue</p>
+            <div class="detail-card-main">Lipa Grill - Padre Garcia</div>
+            <div class="detail-card-sub">San Felipe, Padre Garcia</div>
+          </div>
+
+          
+
+        </div>
+
+        <!-- Action Links: Directions & Add to Calendar -->
+        <div class="details-action-buttons">
+          <a id="btn-get-directions" class="btn-primary-action" href="https://www.google.com/maps/place/Lipa+Grill+-+Padre+Garcia/@13.890363,121.197294,17z/data=!3m1!4b1!4m6!3m5!1s0x33bd15001cda605d:0xf23dfb83ab8018b2!8m2!3d13.890363!4d121.2021595!16s%2Fg%2F11x8gn_b1b?entry=ttu&g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>Get Directions</span>
+          </a>
+
+          <button id="btn-add-calendar" class="btn-secondary-action">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+              <path d="M16 2v4M8 2v4M3 10h18M12 14v4M10 16h4"></path>
+            </svg>
+            <span>Add to Calendar</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Host Signature -->
+      <footer class="host-signature">
+        With love, The Family
+      </footer>
+
+    </main>
+
+  </div>
+
+  <!-- Lightbox Modal for Photo Enlargement -->
+  <div id="lightbox-modal" class="lightbox-modal" role="dialog" aria-modal="true" aria-label="Photo Lightbox">
+    <button id="lightbox-close-btn" class="lightbox-close-btn" aria-label="Close Lightbox">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <img id="lightbox-img" class="lightbox-img" src="" alt="Enlarged Memory Photo">
+    <p id="lightbox-caption" class="lightbox-caption"></p>
+  </div>
+
+  <!-- Application Logic -->
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

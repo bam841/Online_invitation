@@ -8,6 +8,8 @@ A luxury, interactive, mobile-optimized online birthday invitation web applicati
 
 - 💌 **3D Interactive Envelope**: Realistic wax seal ("N"), flap unfolding animation, rising invitation card, and celebration confetti burst.
 - 📱 **Mobile-First & Ultra-Smooth**: Designed specifically for smartphone screens with fluid touch gestures, fast animations, and responsive centering on desktop.
+- 🔄 **Rotating "Happy Birthday to You" Word Carousel**: An infinite celebratory marquee ribbon streaming gold sparkles, warm rose-gold gradients, and continuous birthday greetings.
+- ⬇️ **Automatic Smooth Scroll-Down Tour**: Guides guests smoothly down through the hero, word carousel, memory lane, and celebration details (with instant user-touch cancellation).
 - ⏰ **Live Countdown Timer**: Real-time ticker counting down to Wednesday, November 11, 2026 at 12:00 PM.
 - 📍 **Exact Venue & 1-Tap Directions**: Pre-configured for **Lipa Grill - Padre Garcia** (San Felipe, Padre Garcia) with direct Google Maps navigation.
 - 🖼️ **Portrait & Memory Lane**: Arched portrait frame featuring Neddie Zapiico (`asset/mader.jpeg`), with an auto-scrolling photo carousel and full-screen lightbox zoom.

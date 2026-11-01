@@ -51,6 +51,7 @@
     // Action Buttons
     elements.btnDirections = document.getElementById('btn-get-directions');
     elements.btnCalendar = document.getElementById('btn-add-calendar');
+    elements.btnScrollDown = document.getElementById('btn-scroll-down');
     elements.memoryCarousel = document.getElementById('memory-carousel');
     elements.carouselPrev = document.getElementById('carousel-prev');
     elements.carouselNext = document.getElementById('carousel-next');
@@ -477,7 +478,77 @@
       elements.screenEnvelope.classList.add('is-hidden');
       elements.mainInvitation.classList.add('is-visible');
       window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      // Begin gentle automatic scroll down tour after 2.6 seconds
+      setTimeout(() => {
+        if (!userInteractedWithScroll) {
+          startAutoScrollDownTour();
+        }
+      }, 2600);
     }, 1100);
+  }
+
+  /* -------------------------------------------------------------------------
+     Automatic Smooth Scroll Down Tour Effect
+     ------------------------------------------------------------------------- */
+  let autoScrollAnimId = null;
+  let isAutoScrollingDown = false;
+  let userInteractedWithScroll = false;
+
+  function startAutoScrollDownTour() {
+    if (userInteractedWithScroll || isAutoScrollingDown) return;
+    isAutoScrollingDown = true;
+
+    function step() {
+      if (!isAutoScrollingDown || userInteractedWithScroll) {
+        isAutoScrollingDown = false;
+        return;
+      }
+
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      if (window.scrollY >= maxScroll - 4) {
+        isAutoScrollingDown = false;
+        return;
+      }
+
+      // Smooth, gentle scroll rate (~1.3 pixels per frame)
+      window.scrollBy(0, 1.3);
+      autoScrollAnimId = requestAnimationFrame(step);
+    }
+
+    autoScrollAnimId = requestAnimationFrame(step);
+  }
+
+  function stopAutoScrollDownTour() {
+    userInteractedWithScroll = true;
+    isAutoScrollingDown = false;
+    if (autoScrollAnimId) {
+      cancelAnimationFrame(autoScrollAnimId);
+      autoScrollAnimId = null;
+    }
+  }
+
+  function initAutoScrollListeners() {
+    // If the user scrolls, touches, drags, or presses a key, cancel auto-scroll immediately
+    const cancelEvents = ['wheel', 'touchstart', 'pointerdown', 'keydown', 'mousedown'];
+    cancelEvents.forEach((evt) => {
+      window.addEventListener(evt, () => {
+        if (isAutoScrollingDown) {
+          stopAutoScrollDownTour();
+        }
+      }, { passive: true });
+    });
+
+    // "Scroll to Explore" button
+    if (elements.btnScrollDown) {
+      elements.btnScrollDown.addEventListener('click', () => {
+        stopAutoScrollDownTour();
+        const target = document.querySelector('.details-section');
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    }
   }
 
   /* -------------------------------------------------------------------------
@@ -660,6 +731,7 @@
     startCountdown();
     initCarousel();
     initActionLinks();
+    initAutoScrollListeners();
 
     // Envelope open listeners
     if (elements.openInviteBtn) {

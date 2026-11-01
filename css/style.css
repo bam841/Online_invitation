@@ -614,6 +614,112 @@ input, textarea {
   color: var(--color-text-muted);
 }
 
+/* Scroll Down Exploration Button */
+.btn-scroll-down {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+  padding: 10px 22px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border-gold);
+  background: rgba(255, 250, 244, 0.85);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-primary-dark);
+  box-shadow: 0 4px 14px rgba(58, 37, 40, 0.08);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  animation: bounceDown 2s ease-in-out infinite;
+  cursor: pointer;
+}
+
+.btn-scroll-down:hover {
+  background: #FFFDFC;
+}
+
+.btn-scroll-down:active {
+  transform: scale(0.95);
+}
+
+@keyframes bounceDown {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(6px);
+  }
+  60% {
+    transform: translateY(3px);
+  }
+}
+
+/* --- ROTATING "HAPPY BIRTHDAY" WORD CAROUSEL --- */
+.birthday-word-carousel {
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(90deg, #8C4452 0%, #9A4F5B 50%, #8C4452 100%);
+  color: #FFFDFC;
+  padding: 13px 0;
+  box-shadow: 0 4px 16px rgba(154, 79, 91, 0.22);
+  border-top: 1px solid rgba(232, 213, 181, 0.4);
+  border-bottom: 1px solid rgba(232, 213, 181, 0.4);
+  position: relative;
+  user-select: none;
+  display: flex;
+}
+
+.word-carousel-track {
+  display: flex;
+  width: max-content;
+  animation: wordMarquee 16s linear infinite;
+  will-change: transform;
+}
+
+.birthday-word-carousel:hover .word-carousel-track {
+  animation-play-state: paused;
+}
+
+@keyframes wordMarquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.word-carousel-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-right: 20px;
+}
+
+.ticker-word {
+  font-family: var(--font-serif);
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.ticker-word.highlight {
+  font-style: italic;
+  font-weight: 700;
+  color: #FFE7C2;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.ticker-star {
+  color: #E8D5B5;
+  font-size: 13px;
+  opacity: 0.85;
+}
+
 /* --- Memory Lane Section --- */
 .memory-lane-section {
   padding: 38px 0 42px;

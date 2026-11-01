@@ -19,7 +19,7 @@ const INVITATION_CONFIG = {
   venueName: "Lipa Grill - Padre Garcia",
   venueAddress: "San Felipe, Padre Garcia",
   googleMapsUrl: "https://www.google.com/maps/place/Lipa+Grill+-+Padre+Garcia/@13.890363,121.197294,17z/data=!3m1!4b1!4m6!3m5!1s0x33bd15001cda605d:0xf23dfb83ab8018b2!8m2!3d13.890363!4d121.2021595!16s%2Fg%2F11x8gn_b1b?entry=ttu&g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D",
-
+  
   // Dress Code
   dressCodeTitle: "Semi-Formal",
   dressCodeDescription: "Rose Gold, Champagne & Cream",

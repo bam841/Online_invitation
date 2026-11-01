@@ -1,4 +1,4 @@
-# Neddie Zapiico's 50th Birthday Celebration - Online Invitation 🌸
+# Neddie Zapico's 50th Birthday Celebration - Online Invitation 🌸
 
 A luxury, interactive, mobile-optimized online birthday invitation web application featuring a realistic 3D unfolding envelope, live countdown timer, memory lane photo carousel, ambient music, and 1-tap Google Maps directions.
 
@@ -12,7 +12,7 @@ A luxury, interactive, mobile-optimized online birthday invitation web applicati
 - ⬇️ **Automatic Smooth Scroll-Down Tour**: Guides guests smoothly down through the hero, word carousel, memory lane, and celebration details (with instant user-touch cancellation).
 - ⏰ **Live Countdown Timer**: Real-time ticker counting down to Wednesday, November 11, 2026 at 12:00 PM.
 - 📍 **Exact Venue & 1-Tap Directions**: Pre-configured for **Lipa Grill - Padre Garcia** (San Felipe, Padre Garcia) with direct Google Maps navigation.
-- 🖼️ **Portrait & Memory Lane**: Arched portrait frame featuring Neddie Zapiico (`asset/mader.jpeg`), with an auto-scrolling photo carousel and full-screen lightbox zoom.
+- 🖼️ **Portrait & Memory Lane**: Arched portrait frame featuring Neddie Zapico (`asset/mainInvitationPicture.jpeg`), with an auto-scrolling photo carousel and full-screen lightbox zoom.
 - 🎵 **"Happy Birthday" Music Synthesizer**: Built-in music box synthesizer via the Web Audio API (100% offline, zero external audio loading needed) with an animated sound wave toggle button.
 - 📅 **Add to Calendar**:
   - Generates and downloads a `.ics` calendar event (Apple Calendar, Google Calendar, Outlook) for November 11, 2026 from 12:00 PM to 1:00 PM.
@@ -34,13 +34,13 @@ python3 -m http.server 8000
 
 ### 2. How to Customize
 Open [js/config.js](file:///home/bamz/Documents/vs_code/online-invitation/js/config.js) in your text editor and update:
-- `momName`: `"Neddie Zapiico"`
+- `momName`: `"Neddie Zapico"`
 - `milestone`: `"50th Birthday"`
 - `eventDateTime`: `"2026-11-11T12:00:00"`
 - `venueName`: `"Lipa Grill - Padre Garcia"`
 - `venueAddress`: `"San Felipe, Padre Garcia"`
 - `googleMapsUrl`: Direct link to Google Maps
-- `heroPhoto`: Path to portrait photo (`asset/mader.jpeg`)
+- `heroPhoto`: Path to portrait photo (`asset/mainInvitationPicture.jpeg`)
 - `memories`: List of photos and captions for the Memory Lane carousel
 
 ---

@@ -8,7 +8,7 @@
 
   // Fallback config if not found
   const cfg = window.INVITATION_CONFIG || {
-    momName: "Mom",
+    momName: "Neddie Zapiico",
     milestone: "50th Birthday",
     tagline: "A Birthday Celebration",
     eventDateTime: "2026-11-11T12:00:00",
@@ -19,7 +19,7 @@
     googleMapsUrl: "https://www.google.com/maps/place/Lipa+Grill+-+Padre+Garcia/@13.890363,121.197294,17z/data=!3m1!4b1!4m6!3m5!1s0x33bd15001cda605d:0xf23dfb83ab8018b2!8m2!3d13.890363!4d121.2021595!16s%2Fg%2F11x8gn_b1b?entry=ttu&g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D",
     hostName: "With love, The Family",
     heroPhoto: "asset/mader.jpeg",
-    waxSealInitial: "M"
+    waxSealInitial: "N"
   };
 
   // State
@@ -631,7 +631,7 @@
       'PRODID:-//Birthday Invitation//Mom//EN',
       'BEGIN:VEVENT',
       `SUMMARY:${cal.title || `${cfg.momName}'s 50th Birthday Celebration`}`,
-      `DESCRIPTION:${cal.description || `Celebrate Mom's 50th Birthday at ${cfg.venueName}!`}`,
+      `DESCRIPTION:${cal.description || `Celebrate ${cfg.momName}'s 50th Birthday at ${cfg.venueName}!`}`,
       `LOCATION:${cal.location || `${cfg.venueName}, ${cfg.venueAddress}`}`,
       `DTSTART:${cal.start || '20261111T120000'}`,
       `DTEND:${cal.end || '20261111T130000'}`,

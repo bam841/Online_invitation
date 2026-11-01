@@ -4,7 +4,7 @@
  */
 const INVITATION_CONFIG = {
   // Celebration Details
-  momName: "Mom", // Change to Mom's actual name if desired
+  momName: "Neddie Zapiico",
   milestone: "50th Birthday",
   tagline: "A Birthday Celebration",
   letterHeader: "You're Invited to Celebrate",
@@ -34,24 +34,14 @@ const INVITATION_CONFIG = {
 
   // Media
   heroPhoto: "asset/mader.jpeg",
-  waxSealInitial: "M",
+  waxSealInitial: "N",
 
   // Memory Lane Carousel Photos
   memories: [
     {
-      image: "asset/2.jpeg",
-      title: "Forever Radiant",
-      caption: "A heart full of love and grace that lights up every room."
-    },
-    {
       image: "asset/3.jpeg",
       title: "Golden Moments",
       caption: "Through all the years, your laughter and wisdom guide us."
-    },
-    {
-      image: "asset/4.jpeg",
-      title: "Family First",
-      caption: "The pillar of our family, nurturing every dream."
     },
     {
       image: "asset/5.jpeg",
@@ -61,14 +51,14 @@ const INVITATION_CONFIG = {
     {
       image: "asset/cake.jpeg",
       title: "A Life Well Lived",
-      caption: "Celebrating five decades of wonderful memories, love, and endless blessings."
+      caption: "Celebrating five decades of wonderful memories, love, and sweet blessings."
     }
   ],
 
   // Calendar Event Details
   calendar: {
-    title: "Mom's 50th Birthday Celebration",
-    description: "Join us in celebrating Mom's milestone 50th Birthday at Lipa Grill - Padre Garcia! Dress code: Semi-formal (Rose Gold, Champagne & Cream).",
+    title: "Neddie Zapiico's 50th Birthday Celebration",
+    description: "Join us in celebrating Neddie Zapiico's milestone 50th Birthday at Lipa Grill - Padre Garcia! Dress code: Semi-formal (Rose Gold, Champagne & Cream).",
     location: "Lipa Grill - Padre Garcia, San Felipe, Padre Garcia",
     start: "20261111T120000",
     end: "20261111T130000"
